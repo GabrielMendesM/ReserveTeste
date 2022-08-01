@@ -9,8 +9,8 @@ const Countries = () => {
     useEffect(() => {
         const fetchCountries = async () => {
             try {
-                const res = await enviarRequest('https://api.covid19api.com/summary');
-                setCountries(res.Countries);
+                const res = await enviarRequest('http://localhost:5000/countries/tenHighest');
+                setCountries(res.countries);
             } catch (err) {
                 console.log(err);
             }
