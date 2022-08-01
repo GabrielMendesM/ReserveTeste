@@ -2,6 +2,8 @@ import React from 'react';
 
 import Country from './Country';
 
+import "./CountriesTable.css";
+
 const CountriesTable = props => {
     const totalActive = (country) => {
         return country.TotalConfirmed - country.TotalRecovered;
@@ -13,11 +15,11 @@ const CountriesTable = props => {
     
     let n = 1;
     return (
-        <table>
+        <table className='countriesTable'>
             <tr>
-                <th>Ranking</th>
-                <th>Nome</th>
-                <th>Casos Ativos</th>
+                <th className='th_1'>Ranking</th>
+                <th className='th_2'>Nome</th>
+                <th className='th_3'>Casos Ativos</th>
             </tr>
             {orderedList().map(c => (
                 <Country 

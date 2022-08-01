@@ -1,12 +1,14 @@
 import React from 'react';
 
-import Countries from './Countries/Pages/Countries';
-
 import './App.css';
+import MainHeader from './Shared/MainHeader';
+
+const Countries = React.lazy(() => import('./Countries/Pages/Countries'));
 
 function App() {
   return (
     <div className="App">
+      <MainHeader />
       <Countries />
     </div>
   );
